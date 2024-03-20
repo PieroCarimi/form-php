@@ -14,16 +14,16 @@
             <div id="message" class="hide"></div>
             <form id="contact-form" action="submit.php" method="post">
                 <div>
-                    <input type="text" name="companyName" placeholder="Company name">
+                    <input type="text" id="companyName" name="companyName" placeholder="Company name">
                 </div>
                 <div>
-                    <input type="text" name="fullName" placeholder="Full name">
+                    <input type="text" id="fullName" name="fullName" placeholder="Full name">
                 </div>
                 <div>
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" id="email" name="email" placeholder="Email">
                 </div>
                 <div>
-                    <input type="text" name="phone" placeholder="Phone">
+                    <input type="text" id="phone" name="phone" placeholder="Phone">
                 </div>
                 <div>
                     <select id="service" name="service" placeholder="Choose service">
@@ -41,5 +41,6 @@
                 <img src="immagine.png" alt="Delivery">
             </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
