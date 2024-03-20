@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Form</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
                     <input type="email" id="email" name="email" placeholder="Email">
                 </div>
                 <div>
-                    <input type="text" id="phone" name="phone" placeholder="Phone">
+                    <input type="text" id="phone" name="phone" placeholder="Phone" pattern="[0-9]{}">
                 </div>
                 <div>
                     <select id="service" name="service" placeholder="Choose service">

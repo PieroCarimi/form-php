@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             isValid = false;
         }
     
-        if (phone.trim() === "") {
+        if (phone.trim() === "" || !isValidPhone(phone)) {
             isValid = false;
         }
     
@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function isValidEmail(email) {
         var emailRegex = /\S+@\S+\.\S+/;
         return emailRegex.test(email);
+    }
+
+    function isValidPhone(phone) {
+        var phoneRegex = /^\d+$/;
+        return phoneRegex.test(phone);
     }
 
     function updateSubmitButtonState() {

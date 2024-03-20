@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($phone)) {
         $errors["phone"] = "Phone is required";
+    } elseif (!preg_match("/^\d+$/", $phone)) {
+        $errors["phone"] = "Phone should contain only numbers";
     }
     if (empty($service)) {
         $errors["service"] = "Service is required";
