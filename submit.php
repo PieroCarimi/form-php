@@ -28,12 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
-        echo "<h2>Message sent successfully!</h2><br>";
-        echo "Company Name: " . $companyName . "<br>";
-        echo "Full Name: " . $fullName . "<br>";
-        echo "Email: " . $email . "<br>";
-        echo "Phone: " . $phone . "<br>";
-        echo "Service: " . $service . "<br>";
+        $success_data = [
+            'message' => "Message sent successfully!",
+            'companyName' => $companyName,
+            'fullName' => $fullName,
+            'email' => $email,
+            'phone' => $phone,
+            'service' => $service
+        ];
+        echo json_encode($success_data);
     } else {
         http_response_code(400);
         header('Content-Type: application/json');

@@ -55,4 +55,33 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('input', updateSubmitButtonState);
 
     updateSubmitButtonState();
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            var messageDiv = document.createElement('div');
+            messageDiv.innerHTML = `
+                <h2>${data.message}</h2>
+                <p>Company Name: ${data.companyName}</p>
+                <p>Full Name: ${data.fullName}</p>
+                <p>Email: ${data.email}</p>
+                <p>Phone: ${data.phone}</p>
+                <p>Service: ${data.service}</p>
+            `;
+            formContainer.innerHTML = '';
+            message.innerHTML = '';
+            formContainer.appendChild(messageDiv);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
 });
