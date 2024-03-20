@@ -1,0 +1,96 @@
+body{
+    background-color: #84c3fa;
+    margin-top:150px;
+}
+
+.containerDisplay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100%
+}
+.container {
+    width: 400px;
+    
+    padding: 20px;
+    background-color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form > div {
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #2e5580;
+}
+
+input, button {
+    display: block;
+  }
+  
+.input-container {
+    display: grid;
+    margin-bottom: clamp(0.8rem, 3vw, 1.1rem);
+  }
+  
+input, select {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 1em 3.5em 1em 1em;
+    border: 1px solid rgba(201, 209, 217, 0.7);
+    width:85%;
+  }
+  
+input:hover, select:hover {
+    background-color: rgba(201, 209, 217, 0.1);
+}
+  
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px rgba(51, 65, 85, 0.5);
+}
+  
+input.invalid, select.invalid {
+    border: 2px solid #ff7979;
+}
+  
+input.invalid:focus, select.invalid:focus {
+    box-shadow: 0 0 1px 1px #ff7979;
+}
+  
+input.invalid::placeholder, select.invalid::placeholder {
+    color: #ff7979;
+}
+
+button {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 28px;
+    text-shadow: 1px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
